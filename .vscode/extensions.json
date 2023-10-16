@@ -1,0 +1,4 @@
+{
+  "recommendations": ["astro-build.astro-vscode", "yusukehirao.vscode-markuplint", "stylelint.vscode-stylelint", "esbenp.prettier-vscode", "csstools.postcss"],
+  "unwantedRecommendations": []
+}

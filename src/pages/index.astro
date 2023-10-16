@@ -1,0 +1,31 @@
+---
+// ====================================
+// Import
+// ====================================
+
+// Config
+import { SITE } from "../config";
+
+// Component
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+
+// ====================================
+// Data
+// ====================================
+const res = await fetch("https://shibajuku.net/wp-json/wp/v2/posts");
+const posts = await res.json();
+---
+
+<Layout title={`${SITE.name}`} description="このページの紹介文">
+  <main>
+    <Hero />
+  </main>
+</Layout>
+
+<style>
+  p {
+    color: #fff;
+    display: block;
+  }
+</style>

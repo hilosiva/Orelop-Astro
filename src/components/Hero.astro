@@ -1,0 +1,50 @@
+---
+import { Picture } from 'astro:assets';
+// Image
+import cover from '../assets/img/cover.jpg';
+---
+
+<div class="hero" data-py="min:2 md:3 lg:4">
+  <figure class="hero__image">
+    <Picture src={cover} formats={['avif', 'webp']} widths={[300, 768, 1920, 4000]} alt="" />
+  </figure>
+  <div class="hero__body">
+    <p class="hero__text">Ore no Astro</p>
+  </div>
+</div>
+
+<style lang="scss">
+  @charset 'UTF-8';
+  @use "sass:math";
+  @use "../assets/scss/global" as *;
+
+  .hero {
+    position: relative;
+
+
+    &__image {
+      height: 70dvh;
+
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center bottom;
+      }
+    }
+
+    &__body {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+    }
+
+    &__text {
+      font-size: clamp(1.5rem, 10vw, 10rem);
+      color: #fff;
+      font-weight: 900;
+    }
+  }
+</style>

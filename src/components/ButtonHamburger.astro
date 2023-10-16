@@ -1,0 +1,85 @@
+---
+const { text, controls } = Astro.props;
+---
+
+<button type="button" class="js-drawer hamburger" aria-expanded="false" aria-controls={controls}>
+  <span class="hamburger__line">
+    <span class="ol-visuallyHidden">{text}</span>
+  </span>
+</button>
+
+<style lang="scss">
+  @charset 'UTF-8';
+  @use "sass:math";
+  @use "../assets/scss/global" as *;
+
+  /*
+  Hamburger
+*/
+  .hamburger {
+    position: fixed;
+    top: pxToRem(30px);
+    right: pxToVw(18px);
+    display: inline-block;
+    width: pxToVw(55px);
+    height: pxToVw(55px);
+    max-width: 55px;
+    max-height: 55px;
+    border: 1px solid #e5f8fc;
+    box-shadow: 3px 3px 15px #cdf4d6;
+    border-radius: 50%;
+    background-color: #fff;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    appearance: none;
+    transition: 0.3s var(--ol-ease-out-expo);
+    z-index: 1000;
+    @include mq(md) {
+      top: pxToRem(32px);
+      right: pxToVw(30px);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      height: 1px;
+      width: calc(20 / 55 * 100%);
+      background-color: var(--ol-main-color);
+      transition: inherit;
+      transition-property: transform;
+    }
+
+    &::before {
+      transform: translateY(-3px);
+    }
+    &::after {
+      transform: translateY(3px);
+    }
+
+    &[aria-expanded="true"] {
+      &::before {
+        transform: translateY(0) rotate(45deg);
+      }
+      &::after {
+        transform: translateY(0) rotate(-45deg);
+      }
+    }
+
+    @include mq(lg) {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  import * as COMMON from "../assets/js/common";
+
+  new COMMON.Toggle(".js-drawer", { mobileOnly: true });
+</script>
