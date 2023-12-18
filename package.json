@@ -11,11 +11,10 @@
     "lint": "markuplint \"./src/**/*.astro\""
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.0.1",
-    "astro": "^3.3.0"
+    "@astrojs/sitemap": "^3.0.3",
+    "astro": "^4.0.6"
   },
   "devDependencies": {
-    "@hilosiva/olayoutcss": "^0.2.1",
     "@markuplint/astro-parser": "^3.10.0",
     "autoprefixer": "^10.4.16",
     "css-declaration-sorter": "^7.1.1",
@@ -23,6 +22,7 @@
     "gsap": "^3.12.2",
     "markuplint": "^3.13.0",
     "postcss-html": "^1.5.0",
+    "postcss-nesting": "^12.0.2",
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.0",
     "sass": "^1.69.3",
