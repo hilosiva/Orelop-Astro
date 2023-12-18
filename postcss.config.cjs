@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    require("@hilosiva/olayoutcss"),
+    require("postcss-nesting"),
     require("autoprefixer")({
       grid: "autoplace", // IE11対応
     }),

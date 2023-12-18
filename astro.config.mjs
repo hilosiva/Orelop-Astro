@@ -1,6 +1,5 @@
 import { SITE } from "./src/config";
 import { defineConfig } from "astro/config";
-
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
@@ -11,8 +10,7 @@ export default defineConfig({
   // scopedStyleStrategy: "class",
 
   server: {
-    port: 3000,
-    host: true
+    host: true,
   },
-  integrations: [sitemap()]
+  integrations: [sitemap()],
 });
