@@ -1,26 +1,63 @@
 ---
-// ====================================
-// Import
-// ====================================
+import { Picture } from "astro:assets";
 
 // Config
 import { SITE } from "../config";
 
-// Component
-import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
+// Layout
+import Layout from "@layouts/Layout.astro";
 
-// ====================================
-// Data
-// ====================================
-const res = await fetch("https://shibajuku.net/wp-json/wp/v2/posts");
-const posts = await res.json();
+// Image
+import cover from "@assets/images/cover.jpg";
 ---
 
-<Layout title={`${SITE.name}`} description="このページの紹介文">
+<Layout title={`${SITE.name}`} description="ページ紹介文">
   <main>
-    <Hero />
+    <div class="hero">
+      <p>{SITE.name}</p>
+      <figure class="cover">
+        <Picture src={cover} formats={["avif", "webp"]} widths={[300, 768, 1920, 4000]} alt="" />
+      </figure>
+    </div>
   </main>
 </Layout>
 
-<style></style>
+<style>
+  .hero {
+    display: block grid;
+    grid-template-columns: 1fr;
+
+    &::after {
+      block-size: 100%;
+      content: "";
+      background-color: rgb(0 0 0 / 0.8);
+    }
+
+    > *,
+    &::after {
+      grid-area: 1 / 1;
+    }
+
+    p {
+      z-index: 1;
+      align-self: center;
+      justify-self: center;
+      font-size: var(--font-2xl);
+      font-weight: 900;
+      color: transparent;
+      background-color: #fff;
+      background-image: linear-gradient(125deg, #387fd1, #9d2fd0);
+      background-clip: text;
+    }
+  }
+
+  .cover {
+    block-size: 70vb;
+
+    img {
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;
+    }
+  }
+</style>

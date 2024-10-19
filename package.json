@@ -1,34 +1,28 @@
 {
-  "name": "project",
+  "name": "ashim-factory",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "markuplint \"./src/**/*.astro\""
+    "check": "biome check --write ./src"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.0.3",
-    "astro": "^4.0.6"
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^4.16.6",
+    "lightningcss": "^1.27.0",
+    "typescript": "^5.6.3"
   },
   "devDependencies": {
-    "@markuplint/astro-parser": "^3.10.0",
-    "autoprefixer": "^10.4.16",
-    "css-declaration-sorter": "^7.1.1",
-    "css-mqpacker": "^7.0.0",
-    "gsap": "^3.12.2",
-    "markuplint": "^3.13.0",
-    "postcss-html": "^1.5.0",
-    "postcss-nesting": "^12.0.2",
-    "prettier": "^3.0.3",
-    "prettier-plugin-astro": "^0.12.0",
-    "sass": "^1.69.3",
-    "stylelint": "^15.10.3",
+    "@biomejs/biome": "1.9.4",
+    "@markuplint/astro-parser": "^4.6.9",
+    "markuplint": "^4.10.1",
+    "stylelint": "^16.10.0",
     "stylelint-config-html": "^1.1.0",
-    "stylelint-config-recess-order": "^4.3.0",
-    "stylelint-config-standard-scss": "^11.0.0"
+    "stylelint-config-recess-order": "^5.1.1"
   }
 }
