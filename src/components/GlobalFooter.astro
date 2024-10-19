@@ -1,18 +1,12 @@
----
-import { SITE } from "../config";
----
-
 <footer class="footer">
-  <div class="ol-spacer" data-py="min:5 lg:8">
-    <div class="ol-container">
-      <p class="copyright"><small lang="en">© <time>2023</time> <span class="copyright__name">Shibata Hironori</span></small></p>
-    </div>
+  <div class="footer__inner">
+    <p class="copyright"><small lang="en">© <time>2024</time> <span class="copyright__name">Shibata Hironori</span></small></p>
   </div>
 </footer>
 
-<style lang="scss">
-  @charset 'UTF-8';
-  @use "sass:math";
-  @use "../assets/scss/global" as *;
-
+<style>
+  .footer__inner {
+    padding-block: var(--space-sm);
+    padding-inline: var(--offset-md);
+  }
 </style>

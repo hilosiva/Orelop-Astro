@@ -1,29 +1,28 @@
 ---
-import { SITE, COMPANY } from "../config";
+import { SITE } from "../config";
 import GlobalNavLink from "./GlobalNavLink.astro";
-import ButtonHamburger from "./ButtonHamburger.astro";
 
-import logo from "../assets/img/logo/logo-primary.svg";
+const { pathname } = Astro.url;
+
+const Element = pathname === "/" ? "h1" : "p";
 
 const navLists = [
   {
-    name: "About",
-    url: `${SITE.base}about/`,
+    name: "Sample",
+    url: `${SITE.base}/sample/`,
   },
 ];
 ---
 
 <header class="header">
   <div class="header__inner">
-    <h1 class="header__title">
-      <a href={`${SITE.base}`} class="logo">
+    <Element class="header__title">
+      <a href={`${SITE.base}/`} class="logo">
         {SITE.name}
       </a>
-    </h1>
+    </Element>
     <nav class="header__nav">
-      <ButtonHamburger text="Menu" controls="globalNav" />
-
-      <div id="globalNav" class="globalNav" aria-hidden="true">
+      <div id="globalNav" class="globalNav">
         <ul class="globalNav__list">
           {
             navLists.map((item) => (
@@ -40,34 +39,9 @@ const navLists = [
   </div>
 </header>
 
-<style lang="scss">
-  @charset 'UTF-8';
-  @use "sass:math";
-  @use "../assets/scss/global" as *;
-
-  .header {
-    &__inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: pxToRem(16px) 5%;
-    }
-  }
-
-  .globalNav {
-    &__list {
-      display: flex;
-      align-items: center;
-
-      li + li {
-        margin-left: pxToRem(40px);
-      }
-    }
-  }
-
-
-  .logo {
-    color: inherit;
-    text-decoration: none;
+<style>
+  .header__inner {
+    padding-block: var(--space-sm);
+    padding-inline: var(--offset-md);
   }
 </style>
