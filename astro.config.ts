@@ -1,6 +1,10 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
-import { SITE } from './src/config';
+import { defineConfig } from "astro/config";
+import { SITE } from "./src/config";
+
+import sitemap from "@astrojs/sitemap";
+
+import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,7 +22,7 @@ export default defineConfig({
     },
   },
 
-   prefetch: {
+  prefetch: {
     prefetchAll: true,
   },
 
@@ -26,4 +30,13 @@ export default defineConfig({
     host: true,
     open: true,
   },
+
+  integrations: [
+    sitemap(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),
+  ],
 });

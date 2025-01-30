@@ -6,7 +6,7 @@ export const SITE = {
   description: "Webサイトの説明文",
   url: "https://example.com",
   base: "",
-  trackingId: "G-XXXXXX",
+  trackingId: null, // G-XXXXXXX
   clientRouter: true,
 };
 

@@ -2,7 +2,13 @@
   "parser": {
     "\\.astro$": "@markuplint/astro-parser"
   },
-  "extends": [
-    "markuplint:recommended"
+  "extends": ["markuplint:recommended"],
+  "nodeRules": [
+    {
+      "selector": "[async]",
+      "rules": {
+        "required-attr": false
+      }
+    }
   ]
 }
