@@ -1,7 +1,6 @@
-import sitemap from "@astrojs/sitemap";
-import { defineConfig } from "astro/config";
-import { SITE } from "./src/config";
 // @ts-check
+import { defineConfig } from 'astro/config';
+import { SITE } from './src/config';
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,10 +18,12 @@ export default defineConfig({
     },
   },
 
+   prefetch: {
+    prefetchAll: true,
+  },
+
   server: {
     host: true,
     open: true,
   },
-
-  integrations: [sitemap()],
 });

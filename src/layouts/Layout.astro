@@ -1,11 +1,11 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 // Config
 import { SITE, SNS } from "../config";
 
 // Style
-import "@assets/styles/global.css";
+// import "@assets/styles/global.css";
 
 // Component
 import GlobalFooter from "@components/GlobalFooter.astro";
@@ -32,8 +32,8 @@ const { title, description } = Astro.props;
     <meta property="og:locale" content="ja_JP" />
     <meta property="og:site_name" content={SITE.name} />
     <meta name="twitter:card" content="summary_large_image" />
-    {SNS.twitter && <meta name="twitter:site" content={SNS.twitter} />}
-    {SITE.viewTransition && <ViewTransitions />}
+    {SNS.x && <meta name="twitter:site" content={SNS.x} />}
+    {SITE.clientRouter && <ClientRouter />}
     <title>{title}</title>
     <link rel="canonical" href={Astro.url} />
     <link rel="icon" href={`${SITE.base}/favicon.ico`} sizes="32x32" />

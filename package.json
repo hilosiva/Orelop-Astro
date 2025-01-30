@@ -1,28 +1,24 @@
 {
-  "name": "orelop-astro",
+  "name": "@hilosiva/astro",
   "type": "module",
-  "version": "0.0.1",
+  "version": "3.0.0bata-0",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "check": "biome check --write ./src"
+    "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/sitemap": "^3.2.1",
-    "astro": "^4.16.6",
-    "lightningcss": "^1.27.0",
-    "typescript": "^5.6.3"
+    "astro": "^5.1.10",
+    "lightningcss": "^1.29.1",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@markuplint/astro-parser": "^4.6.9",
-    "markuplint": "^4.10.1",
-    "stylelint": "^16.10.0",
+    "@biomejs/biome": "^1.9.4",
+    "@markuplint/astro-parser": "^4.6.14",
+    "markuplint": "^4.11.4",
+    "stylelint": "^16.14.1",
     "stylelint-config-html": "^1.1.0",
-    "stylelint-config-recess-order": "^5.1.1"
+    "stylelint-config-recess-order": "^6.0.0"
   }
 }
