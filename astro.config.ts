@@ -1,10 +1,9 @@
+import partytown from "@astrojs/partytown";
+import sitemap from "@astrojs/sitemap";
 // @ts-check
 import { defineConfig } from "astro/config";
+import vaultcss from "vite-plugin-vaultcss";
 import { SITE } from "./src/config";
-
-import sitemap from "@astrojs/sitemap";
-
-import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,14 +11,7 @@ export default defineConfig({
   site: SITE.url,
 
   vite: {
-    css: {
-      transformer: "lightningcss",
-      lightningcss: {
-        drafts: {
-          customMedia: true,
-        },
-      },
-    },
+    plugins: [vaultcss()],
   },
 
   prefetch: {
