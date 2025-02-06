@@ -6,8 +6,8 @@ export const SITE = {
   description: "Webサイトの説明文",
   url: "https://example.com",
   base: "",
-  trackingId: "G-XXXXXX",
-  viewTransition: true,
+  trackingId: null, // G-XXXXXXX
+  clientRouter: true,
 };
 
 // ================================
@@ -39,7 +39,7 @@ export const COMPANY = {
 // SNS情報
 // ================================
 export const SNS = {
-  twitter: null,
+  x: null,
   instagram: null,
   facebook: null,
 };
