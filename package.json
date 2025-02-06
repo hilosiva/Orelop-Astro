@@ -1,7 +1,11 @@
 {
   "name": "@hilosiva/astro",
   "type": "module",
-  "version": "3.0.0bata-0",
+  "version": "3.0.0",
+  "author": "Shibata Hironori",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
