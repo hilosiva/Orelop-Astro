@@ -43,11 +43,11 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0(stylelint@16.14.1(typescript@5.7.3))
       vaultcss:
-        specifier: ^0.1.2
-        version: 0.1.2
+        specifier: ^0.1.4
+        version: 0.1.4
       vite-plugin-vaultcss:
-        specifier: ^0.1.2
-        version: 0.1.2(vite@6.0.11(lightningcss@1.29.1))
+        specifier: ^0.1.4
+        version: 0.1.4(vite@6.0.11(lightningcss@1.29.1))
 
 packages:
 
@@ -2372,8 +2372,8 @@ packages:
     resolution: {integrity: sha512-d0z310fCWv5dJwnX1Y/MncBAqGMKEzlBb1AOf7z9K8ALnd0utBX/msg/fA0+sbyN1ihbMsLhrBlnl1ak7Wa0rg==}
     hasBin: true
 
-  vaultcss@0.1.2:
-    resolution: {integrity: sha512-fHSb/F0yUsMxWuDcpE2l7+OXlNSV3ik6eHQZriK81P5K6gJE6LvtOQ4koFuhXpFkqtT6bmkWAbf9MHfmJHX3zQ==}
+  vaultcss@0.1.4:
+    resolution: {integrity: sha512-Xt4itzfuf+ICvIlV9FSRQ3Gd68Wam9I1jYr/AJEhM1F/fWvu5dOxR3YAnRyquWm8BglTMrf5UZvSVuWsrZUeSQ==}
 
   vfile-location@5.0.3:
     resolution: {integrity: sha512-5yXvWDEgqeiYiBe1lbxYF7UMAIm/IcopxMHrMQDq3nvKcjPKIhZklUKL+AE7J7uApI4kwe2snsK+eI6UTj9EHg==}
@@ -2384,10 +2384,10 @@ packages:
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
 
-  vite-plugin-vaultcss@0.1.2:
-    resolution: {integrity: sha512-3/SUgGBGoinUWilQ/mXdZQtu7r4HheoaWxikssqC1MaNHoeEPo2OM1CFdwaUckugrCdNbCG4p8Szes8W2a6VZg==}
+  vite-plugin-vaultcss@0.1.4:
+    resolution: {integrity: sha512-G700R3Mqqp6RATEEnfAfhDRWImyGQJHal8vJwZQuT9MVGBdl6vzSkccHva6wrhBqghFRgswRhT6veoMQm4Acgw==}
     peerDependencies:
-      vite: ^5.4.0
+      vite: ^5.4.0 || ^6
 
   vite@6.0.11:
     resolution: {integrity: sha512-4VL9mQPKoHy4+FE0NnRE/kbY51TOfaknxAjt3fJbGJxhIpBZiqVzlZDEesWWsuREXHwNdAoOFZ9MkPEVXczHwg==}
@@ -5193,7 +5193,7 @@ snapshots:
 
   uuid@11.0.3: {}
 
-  vaultcss@0.1.2:
+  vaultcss@0.1.4:
     dependencies:
       '@hilosiva/oreset': 3.0.2
       browserslist: 4.24.4
@@ -5216,9 +5216,9 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite-plugin-vaultcss@0.1.2(vite@6.0.11(lightningcss@1.29.1)):
+  vite-plugin-vaultcss@0.1.4(vite@6.0.11(lightningcss@1.29.1)):
     dependencies:
-      vaultcss: 0.1.2
+      vaultcss: 0.1.4
       vite: 6.0.11(lightningcss@1.29.1)
 
   vite@6.0.11(lightningcss@1.29.1):
