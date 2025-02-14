@@ -33,17 +33,17 @@ cd /path/to/project-directory
 
 ■ npm
 ```bash
-npm create orelop@latest
+npm create orelop@latest --template=astro
 ```
 
 ■ yarn
 ```bash
-yarn create orelop@latest
+yarn create orelop@latest --template=astro
 ```
 
 ■ pnpm
 ```bash
-pnpm create orelop@latest
+pnpm create orelop@latest --template=astro
 ```
 プロジェクト名を聞かれるのでプロジェクト名を入力してエンターしてください。
 その後、「使用するフレームワーク」の選択から「Astro」を選択することで「Orelop Astro」がインストールされます。
