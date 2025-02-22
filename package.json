@@ -26,8 +26,8 @@
     "stylelint": "^16.14.1",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-recess-order": "^6.0.0",
-    "vaultcss": "^0.1.5",
-    "vaultscript": "^0.1.5",
-    "vite-plugin-vaultcss": "^0.1.5"
+    "vaultcss": "^0.1.6",
+    "vaultscript": "^0.1.6",
+    "vite-plugin-vaultcss": "^0.1.6"
   }
 }
