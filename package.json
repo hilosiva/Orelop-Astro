@@ -1,7 +1,7 @@
 {
   "name": "@hilosiva/astro",
   "type": "module",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "author": "Shibata Hironori",
   "engines": {
     "node": ">=20"
@@ -21,13 +21,18 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@hilosiva/biome-config": "^0.0.1",
+    "@hilosiva/stylelint-config": "^0.0.1",
     "@markuplint/astro-parser": "^4.6.14",
     "markuplint": "^4.11.4",
     "stylelint": "^16.14.1",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-recess-order": "^6.0.0",
-    "vaultcss": "^0.1.9",
+    "vaultcss": "^0.1.10",
     "vaultscript": "^0.1.6",
     "vite-plugin-vaultcss": "^0.1.9"
+  },
+  "volta": {
+    "node": "20.10.0"
   }
 }

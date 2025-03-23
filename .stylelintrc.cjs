@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ["stylelint-config-html", "stylelint-config-recess-order"],
+  extends: ["stylelint-config-html", "@hilosiva/stylelint-config"],
 };
