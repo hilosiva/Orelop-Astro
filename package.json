@@ -10,7 +10,13 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.astro": ["markuplint", "biome check --write", "stylelint --fix"],
+    "*.{css,scss}": ["biome check --write", "stylelint --fix"],
+    "*.{ts,tsx,js,jsx}": "biome check --write"
   },
   "dependencies": {
     "@astrojs/partytown": "^2.1.3",
@@ -24,6 +30,8 @@
     "@hilosiva/biome-config": "^0.0.1",
     "@hilosiva/stylelint-config": "^0.0.1",
     "@markuplint/astro-parser": "^4.6.14",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
     "markuplint": "^4.11.4",
     "stylelint": "^16.14.1",
     "stylelint-config-html": "^1.1.0",
@@ -34,5 +42,6 @@
   },
   "volta": {
     "node": "20.10.0"
-  }
+  },
+  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
 }
