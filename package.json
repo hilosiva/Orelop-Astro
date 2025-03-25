@@ -15,6 +15,7 @@
   },
   "lint-staged": {
     "*.astro": ["markuplint", "biome check --write", "stylelint --fix"],
+    "*.html": ["markuplint"],
     "*.{css,scss}": ["biome check --write", "stylelint --fix"],
     "*.{ts,tsx,js,jsx}": "biome check --write"
   },
