@@ -11,6 +11,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "lint:html": "markuplint \"**/*.html\"",
+    "lint:astro": "markuplint \"**/*.astro\" && biome check --write ./src && stylelint --fix **/*.{astro}",
+    "lint:style": "biome check --write ./src && stylelint --fix **/*.{css,scss,sass}",
+    "lint:script": "biome check --write ./src",
     "prepare": "husky"
   },
   "lint-staged": {
