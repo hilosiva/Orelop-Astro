@@ -1,7 +1,7 @@
 {
   "name": "@hilosiva/astro",
   "type": "module",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "author": "Shibata Hironori",
   "engines": {
     "node": ">=20"
@@ -41,9 +41,9 @@
     "stylelint": "^16.14.1",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-recess-order": "^6.0.0",
-    "vaultcss": "^0.1.10",
+    "vaultcss": "^0.1.11",
     "vaultscript": "^0.1.6",
-    "vite-plugin-vaultcss": "^0.1.9"
+    "vite-plugin-vaultcss": "^0.1.10"
   },
   "volta": {
     "node": "20.10.0"
