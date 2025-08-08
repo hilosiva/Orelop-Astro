@@ -40,12 +40,16 @@ import cover from "@assets/images/cover.jpg";
       z-index: 1;
       align-self: center;
       justify-self: center;
-      font-size: fluid(40px 80px);
+      font-size: fluid(40px 80px cqi);
       font-weight: 900;
       color: transparent;
       background-color: #fff;
       background-image: linear-gradient(125deg, #387fd1, #9d2fd0);
       background-clip: text;
+
+      @media (--md) {
+        background-image: linear-gradient(125deg, #a1d138, #2f82d0);
+      }
     }
   }
 
